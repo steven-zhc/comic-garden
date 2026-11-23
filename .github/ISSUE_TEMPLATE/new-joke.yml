@@ -20,7 +20,7 @@ body:
     id: cast
     attributes:
       label: Who should be in it (optional)
-      description: Any of miso (the cat), rosa (the gardener), oak (the tree).
+      description: Any of miso (the cat), rosa (the gardener), oak (the tree), pip (the bird), biscuit (the dog), beep (the car).
       placeholder: miso, rosa
   - type: input
     id: by

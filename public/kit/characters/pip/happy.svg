@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" overflow="visible" viewBox="0 0 120 160" width="120" height="160">
+<defs><filter id="wobble" x="-10%" y="-10%" width="120%" height="120%"><feTurbulence type="fractalNoise" baseFrequency="0.05" numOctaves="2" seed="7"/><feDisplacementMap in="SourceGraphic" scale="5.5"/></filter></defs>
+<g filter="url(#wobble)">
+<path d="M50 136 L48 152 M70 136 L72 152" stroke="#e0a030" stroke-width="3.5" stroke-linecap="round"/>
+<path d="M36 154 L48 152 L44 146 M48 152 L52 146 M84 154 L72 152 L76 146 M72 152 L68 146" stroke="#e0a030" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+<path d="M22 96 Q4 88 8 70 Q20 80 28 84 Z" fill="#5b8fc7" stroke="#2b2622" stroke-width="2.5" stroke-linejoin="round"/>
+<circle cx="60" cy="92" r="44" fill="#7aa7c7" stroke="#2b2622" stroke-width="2.5"/>
+<ellipse cx="60" cy="112" rx="28" ry="22" fill="#e9f2f8"/>
+<path d="M98 96 Q116 92 114 76 Q104 86 94 84 Z" fill="#5b8fc7" stroke="#2b2622" stroke-width="2.5" stroke-linejoin="round"/>
+<path d="M58 50 Q50 30 60 34 Q62 22 68 36 Q78 30 66 50" fill="#5b8fc7" stroke="#2b2622" stroke-width="2.2" stroke-linejoin="round"/>
+<path d="M43.2 85.9 Q49.5 76.45 55.8 85.9" stroke="#2b2622" stroke-width="2.7300000000000004" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+<path d="M64.2 85.9 Q70.5 76.45 76.8 85.9" stroke="#2b2622" stroke-width="2.7300000000000004" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+<path d="M44.25 92.2 Q60 123.7 75.75 92.2 Z" fill="#2b2622" stroke="#2b2622" stroke-width="2.1" stroke-linejoin="round"/>
+<path d="M53.7 104.8 Q60 120.55000000000001 67.35 104.8 Z" fill="#e86f7c"/>
+<path d="M50.55 93.25 L69.45 93.25 L68.4 97.45 L51.6 97.45 Z" fill="#fff"/>
+<ellipse cx="42.15" cy="96.4" rx="5.25" ry="3.1500000000000004" fill="#f28b8b" opacity="0.7"/><ellipse cx="77.85" cy="96.4" rx="5.25" ry="3.1500000000000004" fill="#f28b8b" opacity="0.7"/>
+<path d="M51 86 L69 86 L60 98 Z" fill="#f2b33d" stroke="#2b2622" stroke-width="2" stroke-linejoin="round"/>
+</g>
+</svg>

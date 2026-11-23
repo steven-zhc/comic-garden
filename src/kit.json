@@ -1,17 +1,49 @@
 {
   "limits": {
-    "panels": { "min": 3, "max": 4 },
-    "castPerPanel": { "min": 1, "max": 2 },
+    "panels": {
+      "min": 3,
+      "max": 4
+    },
+    "castPerPanel": {
+      "min": 1,
+      "max": 2
+    },
     "bubbleChars": 70,
     "captionChars": 80,
     "titleChars": 60
   },
   "characters": {
-    "miso": { "name": "Miso", "about": "an orange tabby cat, sarcastic, loves naps and knocking things over" },
-    "rosa": { "name": "Rosa", "about": "the gardener, straw hat and green apron, patient until she is not" },
-    "oak": { "name": "Oak", "about": "an old talking tree, slow, wise, occasionally smug" }
+    "miso": {
+      "name": "Miso",
+      "about": "an orange tabby cat, sarcastic, loves naps and knocking things over"
+    },
+    "rosa": {
+      "name": "Rosa",
+      "about": "the gardener, straw hat and green apron, patient until she is not"
+    },
+    "oak": {
+      "name": "Oak",
+      "about": "an old talking tree, slow, wise, occasionally smug"
+    },
+    "pip": {
+      "name": "Pip",
+      "about": "a round little bird, all head and beak, very loud for her size"
+    },
+    "biscuit": {
+      "name": "Biscuit",
+      "about": "a dog with one floppy ear inside out, believes everything is food"
+    },
+    "beep": {
+      "name": "Beep",
+      "about": "a small red car with a face for a windscreen and one wheel too small"
+    }
   },
-  "expressions": ["neutral", "happy", "surprised", "annoyed"],
+  "expressions": [
+    "neutral",
+    "happy",
+    "surprised",
+    "annoyed"
+  ],
   "props": {
     "watering-can": "a blue watering can",
     "umbrella": "a red umbrella",
@@ -26,6 +58,17 @@
     "office": "an office wall with a chart",
     "night": "a night sky with a crescent moon over a hill"
   },
-  "positions": ["left", "right"],
-  "tags": ["garden", "animals", "work", "food", "weather", "puns", "tech"]
+  "positions": [
+    "left",
+    "right"
+  ],
+  "tags": [
+    "garden",
+    "animals",
+    "work",
+    "food",
+    "weather",
+    "puns",
+    "tech"
+  ]
 }

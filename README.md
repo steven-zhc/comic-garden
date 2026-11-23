@@ -19,11 +19,12 @@ npm ci
 npm run dev      # http://localhost:4321, the kit at /kit
 npm run check    # the comic rules, then astro check
 npm run build
+npm run kit      # redraw public/kit/ from scripts/draw-kit.mjs
 ```
 
 ## How a strip is made
 
-A strip is a JSON script in `src/content/comics/`: which background, who stands where with which face, and what they say. `src/components/Strip.astro` draws it from the SVGs in `public/kit/`. `src/content/shelf.json` is the home page's order, newest first. The rules for writing one are in [AGENTS.md](AGENTS.md).
+A strip is a JSON script in `src/content/comics/`: which background, who stands where with which face, and what they say. `src/components/Strip.astro` draws it from the SVGs in `public/kit/`, which `scripts/draw-kit.mjs` draws. The cast is Miso the cat, Rosa the gardener, Oak the tree, Pip the bird, Biscuit the dog and Beep the car. `src/content/shelf.json` is the home page's order, newest first. The rules for writing one are in [AGENTS.md](AGENTS.md).
 
 ## Labels
 

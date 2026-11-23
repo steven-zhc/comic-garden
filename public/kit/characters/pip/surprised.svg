@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" overflow="visible" viewBox="0 0 120 160" width="120" height="160">
+<defs><filter id="wobble" x="-10%" y="-10%" width="120%" height="120%"><feTurbulence type="fractalNoise" baseFrequency="0.05" numOctaves="2" seed="7"/><feDisplacementMap in="SourceGraphic" scale="5.5"/></filter></defs>
+<g filter="url(#wobble)">
+<path d="M50 136 L48 152 M70 136 L72 152" stroke="#e0a030" stroke-width="3.5" stroke-linecap="round"/>
+<path d="M36 154 L48 152 L44 146 M48 152 L52 146 M84 154 L72 152 L76 146 M72 152 L68 146" stroke="#e0a030" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+<path d="M22 96 Q4 88 8 70 Q20 80 28 84 Z" fill="#5b8fc7" stroke="#2b2622" stroke-width="2.5" stroke-linejoin="round"/>
+<circle cx="60" cy="92" r="44" fill="#7aa7c7" stroke="#2b2622" stroke-width="2.5"/>
+<ellipse cx="60" cy="112" rx="28" ry="22" fill="#e9f2f8"/>
+<path d="M98 96 Q116 92 114 76 Q104 86 94 84 Z" fill="#5b8fc7" stroke="#2b2622" stroke-width="2.5" stroke-linejoin="round"/>
+<path d="M58 50 Q50 30 60 34 Q62 22 68 36 Q78 30 66 50" fill="#5b8fc7" stroke="#2b2622" stroke-width="2.2" stroke-linejoin="round"/>
+<circle cx="47.4" cy="83.8" r="12.600000000000001" fill="#fff" stroke="#2b2622" stroke-width="2.3100000000000005"/><circle cx="47.4" cy="81.7" r="1.6800000000000002" fill="#2b2622"/>
+<circle cx="72.6" cy="83.8" r="13.65" fill="#fff" stroke="#2b2622" stroke-width="2.3100000000000005"/><circle cx="72.6" cy="85.9" r="1.6800000000000002" fill="#2b2622"/>
+<ellipse cx="60" cy="109" rx="5.775" ry="11.55" fill="#2b2622"/>
+<path d="M87.3 73.3 Q82.05 83.8 87.3 85.9 Q92.55000000000001 83.8 87.3 73.3 Z" fill="#9fd3e8" stroke="#2b2622" stroke-width="1.47"/>
+<path d="M36.9 48.1 L31.65 39.699999999999996 M60 43.9 L60 33.4 M83.1 48.1 L88.35 39.699999999999996" stroke="#2b2622" stroke-width="2.7300000000000004" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+<path d="M51 86 L69 86 L60 98 Z" fill="#f2b33d" stroke="#2b2622" stroke-width="2" stroke-linejoin="round"/>
+</g>
+</svg>

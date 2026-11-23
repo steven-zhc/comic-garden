@@ -10,7 +10,8 @@
     "dev": "astro dev",
     "build": "astro build",
     "check": "node scripts/check-comics.mjs && astro check",
-    "preview": "astro preview"
+    "preview": "astro preview",
+    "kit": "node scripts/draw-kit.mjs"
   },
   "dependencies": {
     "astro": "7.4.2"

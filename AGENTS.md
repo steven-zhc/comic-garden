@@ -23,7 +23,7 @@ A ticket brings a joke. Your job is to draw it as a strip, using only the kit.
 
 ## Adding to the kit
 
-Only when a joke cannot be drawn without it. A new prop is a 64 × 64 SVG at `public/kit/props/<name>.svg` **and** an entry in `src/kit.json`'s `props`; match the existing style (flat colours, `#2b2622` outlines, 2.5 px strokes). Do not add characters, expressions or backgrounds in a joke ticket.
+Only when a joke cannot be drawn without it. The kit is drawn by `scripts/draw-kit.mjs`: add the prop there, beside the others and in their style (flat colours, `#2b2622` outlines, 2.5 px strokes), run `npm run kit`, give it an entry in `src/kit.json`'s `props`, and commit the SVG the script wrote. Never edit an SVG under `public/kit/` by hand; the next `npm run kit` overwrites it. Do not add characters, expressions or backgrounds in a joke ticket.
 
 ## Reviewing
 
