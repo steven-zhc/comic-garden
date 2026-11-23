@@ -1,13 +1,15 @@
 <svg xmlns="http://www.w3.org/2000/svg" overflow="visible" viewBox="0 0 120 160" width="120" height="160">
+<defs><filter id="wobble" x="-10%" y="-10%" width="120%" height="120%"><feTurbulence type="fractalNoise" baseFrequency="0.045" numOctaves="2" seed="7"/><feDisplacementMap in="SourceGraphic" scale="4"/></filter></defs>
+<g filter="url(#wobble)">
 <rect x="48" y="138" width="9" height="15" rx="3" fill="#4b5d7a"/>
 <rect x="63" y="138" width="9" height="15" rx="3" fill="#4b5d7a"/>
 <ellipse cx="50" cy="155" rx="10" ry="4.5" fill="#2b2622"/>
 <ellipse cx="70" cy="155" rx="10" ry="4.5" fill="#2b2622"/>
 <path d="M38 142 Q38 108 60 106 Q82 108 82 142 Z" fill="#e9e2cf" stroke="#2b2622" stroke-width="2.5"/>
 <path d="M47 142 L49 116 L71 116 L73 142 Z" fill="#5f9e5a" stroke="#2b2622" stroke-width="2"/>
-<path d="M40 116 Q28 126 26 136" stroke="#e9e2cf" stroke-width="8" stroke-linecap="round" fill="none"/>
+<path d="M40 116 Q22 120 24 108 Q26 96 12 94" stroke="#e9e2cf" stroke-width="7" stroke-linecap="round" fill="none"/>
 <path d="M80 116 Q92 110 98 100" stroke="#e9e2cf" stroke-width="8" stroke-linecap="round" fill="none"/>
-<circle cx="26" cy="138" r="5" fill="#f2c9a5" stroke="#2b2622" stroke-width="1.5"/>
+<circle cx="11" cy="93" r="5" fill="#f2c9a5" stroke="#2b2622" stroke-width="1.5"/>
 <circle cx="99" cy="98" r="5" fill="#f2c9a5" stroke="#2b2622" stroke-width="1.5"/>
 <path d="M24 66 Q18 104 34 108 L86 108 Q102 104 96 66 Z" fill="#6b3f26"/>
 <circle cx="60" cy="70" r="36" fill="#f2c9a5" stroke="#2b2622" stroke-width="2.5"/>
@@ -19,8 +21,11 @@
 </g>
 <path d="M43.2 69.9 Q49.5 60.45 55.8 69.9" stroke="#2b2622" stroke-width="2.7300000000000004" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
 <path d="M64.2 69.9 Q70.5 60.45 76.8 69.9" stroke="#2b2622" stroke-width="2.7300000000000004" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
-<path d="M47.4 77.25 Q60 99.3 72.6 77.25 Z" fill="#2b2622" stroke="#2b2622" stroke-width="2.1" stroke-linejoin="round"/>
-<path d="M54.75 85.65 Q60 97.2 66.3 85.65 Z" fill="#e86f7c"/>
+<path d="M44.25 76.2 Q60 107.7 75.75 76.2 Z" fill="#2b2622" stroke="#2b2622" stroke-width="2.1" stroke-linejoin="round"/>
+<path d="M53.7 88.8 Q60 104.55000000000001 67.35 88.8 Z" fill="#e86f7c"/>
+<path d="M50.55 77.25 L69.45 77.25 L68.4 81.45 L51.6 81.45 Z" fill="#fff"/>
 <ellipse cx="42.15" cy="80.4" rx="5.25" ry="3.1500000000000004" fill="#f28b8b" opacity="0.7"/><ellipse cx="77.85" cy="80.4" rx="5.25" ry="3.1500000000000004" fill="#f28b8b" opacity="0.7"/>
-<ellipse cx="60" cy="80" rx="6" ry="5" fill="#e8a882" stroke="#2b2622" stroke-width="1.8"/>
+<ellipse cx="60" cy="80" rx="8" ry="6.5" fill="#e8a882" stroke="#2b2622" stroke-width="1.8"/>
+
+</g>
 </svg>

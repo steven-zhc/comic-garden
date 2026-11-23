@@ -1,7 +1,10 @@
 <svg xmlns="http://www.w3.org/2000/svg" overflow="visible" viewBox="0 0 64 64" width="64" height="64">
+<defs><filter id="wobble" x="-10%" y="-10%" width="120%" height="120%"><feTurbulence type="fractalNoise" baseFrequency="0.045" numOctaves="2" seed="7"/><feDisplacementMap in="SourceGraphic" scale="4"/></filter></defs>
+<g filter="url(#wobble)">
 <path d="M18 38 L46 38 L42 58 L22 58 Z" fill="#c9774a" stroke="#2b2622" stroke-width="2.5" stroke-linejoin="round"/>
 <path d="M32 38 L32 20" stroke="#4d8549" stroke-width="3"/>
 <path d="M32 30 Q22 26 22 18 Q30 20 32 28" fill="#5f9e5a"/>
 <circle cx="32" cy="14" r="7" fill="#f2c94c" stroke="#2b2622" stroke-width="2"/>
 <circle cx="32" cy="14" r="2.5" fill="#c96f28"/>
+</g>
 </svg>

@@ -1,9 +1,11 @@
 <svg xmlns="http://www.w3.org/2000/svg" overflow="visible" viewBox="0 0 120 160" width="120" height="160">
+<defs><filter id="wobble" x="-10%" y="-10%" width="120%" height="120%"><feTurbulence type="fractalNoise" baseFrequency="0.045" numOctaves="2" seed="7"/><feDisplacementMap in="SourceGraphic" scale="4"/></filter></defs>
+<g filter="url(#wobble)">
 <path d="M84 140 Q118 132 108 104 Q104 94 112 90" stroke="#e08a3c" stroke-width="8" stroke-linecap="round" fill="none"/>
 <ellipse cx="60" cy="136" rx="24" ry="20" fill="#f0a050" stroke="#2b2622" stroke-width="2.5"/>
 <ellipse cx="60" cy="140" rx="11" ry="11" fill="#fbe3c4"/>
-<ellipse cx="47" cy="155" rx="8" ry="4.5" fill="#f0a050" stroke="#2b2622" stroke-width="2"/>
-<ellipse cx="73" cy="155" rx="8" ry="4.5" fill="#f0a050" stroke="#2b2622" stroke-width="2"/>
+<ellipse cx="42" cy="154" rx="15" ry="6" fill="#f0a050" stroke="#2b2622" stroke-width="2"/>
+<ellipse cx="78" cy="154" rx="15" ry="6" fill="#f0a050" stroke="#2b2622" stroke-width="2"/>
 <path d="M24 60 L26 16 L52 40 Z" fill="#f0a050" stroke="#2b2622" stroke-width="2.5" stroke-linejoin="round"/>
 <path d="M96 60 L98 22 L70 40 Z" fill="#f0a050" stroke="#2b2622" stroke-width="2.5" stroke-linejoin="round"/>
 <path d="M30 46 L31 28 L43 40 Z" fill="#f7c2c2"/>
@@ -12,9 +14,11 @@
 <path d="M16 82 L34 80 M16 92 L34 87 M104 80 L86 80 M106 90 L86 86" stroke="#2b2622" stroke-width="1.8" stroke-linecap="round"/>
 <path d="M41.6 69.7 Q48.5 59.35 55.4 69.7" stroke="#2b2622" stroke-width="2.9899999999999998" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
 <path d="M64.6 69.7 Q71.5 59.35 78.4 69.7" stroke="#2b2622" stroke-width="2.9899999999999998" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
-<path d="M46.2 77.75 Q60 101.9 73.8 77.75 Z" fill="#2b2622" stroke="#2b2622" stroke-width="2.3" stroke-linejoin="round"/>
-<path d="M54.25 86.95 Q60 99.6 66.9 86.95 Z" fill="#e86f7c"/>
+<path d="M42.75 76.6 Q60 111.1 77.25 76.6 Z" fill="#2b2622" stroke="#2b2622" stroke-width="2.3" stroke-linejoin="round"/>
+<path d="M53.1 90.4 Q60 107.65 68.05 90.4 Z" fill="#e86f7c"/>
+<path d="M49.65 77.75 L70.35 77.75 L69.2 82.35 L50.8 82.35 Z" fill="#fff"/>
 <ellipse cx="40.45" cy="81.2" rx="5.75" ry="3.4499999999999997" fill="#f28b8b" opacity="0.7"/><ellipse cx="79.55" cy="81.2" rx="5.75" ry="3.4499999999999997" fill="#f28b8b" opacity="0.7"/>
 <path d="M56 78 L64 78 L60 82 Z" fill="#d9646a"/>
 
+</g>
 </svg>

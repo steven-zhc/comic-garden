@@ -1,13 +1,15 @@
 <svg xmlns="http://www.w3.org/2000/svg" overflow="visible" viewBox="0 0 120 160" width="120" height="160">
+<defs><filter id="wobble" x="-10%" y="-10%" width="120%" height="120%"><feTurbulence type="fractalNoise" baseFrequency="0.045" numOctaves="2" seed="7"/><feDisplacementMap in="SourceGraphic" scale="4"/></filter></defs>
+<g filter="url(#wobble)">
 <rect x="48" y="138" width="9" height="15" rx="3" fill="#4b5d7a"/>
 <rect x="63" y="138" width="9" height="15" rx="3" fill="#4b5d7a"/>
 <ellipse cx="50" cy="155" rx="10" ry="4.5" fill="#2b2622"/>
 <ellipse cx="70" cy="155" rx="10" ry="4.5" fill="#2b2622"/>
 <path d="M38 142 Q38 108 60 106 Q82 108 82 142 Z" fill="#e9e2cf" stroke="#2b2622" stroke-width="2.5"/>
 <path d="M47 142 L49 116 L71 116 L73 142 Z" fill="#5f9e5a" stroke="#2b2622" stroke-width="2"/>
-<path d="M40 116 Q28 126 26 136" stroke="#e9e2cf" stroke-width="8" stroke-linecap="round" fill="none"/>
+<path d="M40 116 Q22 120 24 108 Q26 96 12 94" stroke="#e9e2cf" stroke-width="7" stroke-linecap="round" fill="none"/>
 <path d="M80 116 Q92 110 98 100" stroke="#e9e2cf" stroke-width="8" stroke-linecap="round" fill="none"/>
-<circle cx="26" cy="138" r="5" fill="#f2c9a5" stroke="#2b2622" stroke-width="1.5"/>
+<circle cx="11" cy="93" r="5" fill="#f2c9a5" stroke="#2b2622" stroke-width="1.5"/>
 <circle cx="99" cy="98" r="5" fill="#f2c9a5" stroke="#2b2622" stroke-width="1.5"/>
 <path d="M24 66 Q18 104 34 108 L86 108 Q102 104 96 66 Z" fill="#6b3f26"/>
 <circle cx="60" cy="70" r="36" fill="#f2c9a5" stroke="#2b2622" stroke-width="2.5"/>
@@ -17,8 +19,11 @@
 <path d="M35 34 Q60 42 85 34" stroke="#c0504d" stroke-width="5" fill="none"/>
 <path d="M82 30 Q96 14 90 4" stroke="#5f9e5a" stroke-width="3" fill="none"/><circle cx="90" cy="4" r="4" fill="#f2c94c" stroke="#2b2622" stroke-width="1.5"/>
 </g>
-<circle cx="49.5" cy="67.8" r="7.3500000000000005" fill="#fff" stroke="#2b2622" stroke-width="2.3100000000000005"/><circle cx="46.875" cy="65.175" r="3.1500000000000004" fill="#2b2622"/>
-<circle cx="70.5" cy="67.8" r="8.4" fill="#fff" stroke="#2b2622" stroke-width="2.3100000000000005"/><circle cx="73.65" cy="70.95" r="3.3600000000000003" fill="#2b2622"/>
+<circle cx="49.5" cy="67.8" r="6.300000000000001" fill="#fff" stroke="#2b2622" stroke-width="2.3100000000000005"/><circle cx="52.125" cy="68.85" r="2.94" fill="#2b2622"/>
+<circle cx="71.55" cy="67.8" r="10.5" fill="#fff" stroke="#2b2622" stroke-width="2.3100000000000005"/><circle cx="66.3" cy="66.75" r="3.57" fill="#2b2622"/>
 <path d="M51.6 84.6 Q55.8 81.45 60 84.6 Q64.2 87.75 68.4 84.6" stroke="#2b2622" stroke-width="2.7300000000000004" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
-<ellipse cx="60" cy="80" rx="6" ry="5" fill="#e8a882" stroke="#2b2622" stroke-width="1.8"/>
+<path d="M58.95 85.125 L58.95 89.85 Q62.625 95.1 66.3 89.85 L66.3 86.175" fill="#e86f7c" stroke="#2b2622" stroke-width="1.6800000000000002" stroke-linejoin="round"/>
+<ellipse cx="60" cy="80" rx="8" ry="6.5" fill="#e8a882" stroke="#2b2622" stroke-width="1.8"/>
+<path d="M56 88 L56 95 L60 95 L60 88 M60 88 L60 95 L64 95 L64 88" fill="#fff" stroke="#2b2622" stroke-width="1.4" stroke-linejoin="round"/>
+</g>
 </svg>

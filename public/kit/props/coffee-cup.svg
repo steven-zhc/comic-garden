@@ -1,5 +1,8 @@
 <svg xmlns="http://www.w3.org/2000/svg" overflow="visible" viewBox="0 0 64 64" width="64" height="64">
+<defs><filter id="wobble" x="-10%" y="-10%" width="120%" height="120%"><feTurbulence type="fractalNoise" baseFrequency="0.045" numOctaves="2" seed="7"/><feDisplacementMap in="SourceGraphic" scale="4"/></filter></defs>
+<g filter="url(#wobble)">
 <path d="M14 24 L46 24 L42 56 L18 56 Z" fill="#f4efe6" stroke="#2b2622" stroke-width="2.5" stroke-linejoin="round"/>
 <path d="M46 30 Q58 32 44 46" stroke="#2b2622" stroke-width="3" fill="none"/>
 <path d="M24 18 Q20 12 24 6 M32 18 Q28 12 32 6 M40 18 Q36 12 40 6" stroke="#9a8f84" stroke-width="2" fill="none" stroke-linecap="round"/>
+</g>
 </svg>

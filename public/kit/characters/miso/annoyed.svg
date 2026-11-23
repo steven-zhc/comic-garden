@@ -1,22 +1,27 @@
 <svg xmlns="http://www.w3.org/2000/svg" overflow="visible" viewBox="0 0 120 160" width="120" height="160">
+<defs><filter id="wobble" x="-10%" y="-10%" width="120%" height="120%"><feTurbulence type="fractalNoise" baseFrequency="0.045" numOctaves="2" seed="7"/><feDisplacementMap in="SourceGraphic" scale="4"/></filter></defs>
+<g filter="url(#wobble)">
 <path d="M84 140 Q118 132 108 104 Q104 94 112 90" stroke="#e08a3c" stroke-width="8" stroke-linecap="round" fill="none"/>
 <ellipse cx="60" cy="136" rx="24" ry="20" fill="#f0a050" stroke="#2b2622" stroke-width="2.5"/>
 <ellipse cx="60" cy="140" rx="11" ry="11" fill="#fbe3c4"/>
-<ellipse cx="47" cy="155" rx="8" ry="4.5" fill="#f0a050" stroke="#2b2622" stroke-width="2"/>
-<ellipse cx="73" cy="155" rx="8" ry="4.5" fill="#f0a050" stroke="#2b2622" stroke-width="2"/>
+<ellipse cx="42" cy="154" rx="15" ry="6" fill="#f0a050" stroke="#2b2622" stroke-width="2"/>
+<ellipse cx="78" cy="154" rx="15" ry="6" fill="#f0a050" stroke="#2b2622" stroke-width="2"/>
 <path d="M24 60 L26 16 L52 40 Z" fill="#f0a050" stroke="#2b2622" stroke-width="2.5" stroke-linejoin="round"/>
 <path d="M96 60 L98 22 L70 40 Z" fill="#f0a050" stroke="#2b2622" stroke-width="2.5" stroke-linejoin="round"/>
 <path d="M30 46 L31 28 L43 40 Z" fill="#f7c2c2"/>
 <circle cx="60" cy="72" r="40" fill="#f0a050" stroke="#2b2622" stroke-width="2.5"/>
 <path d="M50 34 L52 46 M60 32 L60 45 M70 34 L68 46" stroke="#c96f28" stroke-width="3.5" stroke-linecap="round"/>
 <path d="M16 82 L34 80 M16 92 L34 87 M104 80 L86 80 M106 90 L86 86" stroke="#2b2622" stroke-width="1.8" stroke-linecap="round"/>
-<circle cx="48.5" cy="68.55" r="8.049999999999999" fill="#fff" stroke="#2b2622" stroke-width="2.53"/>
-<circle cx="71.5" cy="68.55" r="8.049999999999999" fill="#fff" stroke="#2b2622" stroke-width="2.53"/>
+<circle cx="48.5" cy="68.55" r="5.75" fill="#fff" stroke="#2b2622" stroke-width="2.53"/>
+<circle cx="71.5" cy="68.55" r="9.2" fill="#fff" stroke="#2b2622" stroke-width="2.53"/>
+<rect x="48.5" y="81.2" width="20.7" height="9.2" rx="2.3" fill="#fff" stroke="#2b2622" stroke-width="2.07"/>
+<path d="M55.4 81.2 L55.4 90.4 M62.3 81.2 L62.3 90.4" stroke="#2b2622" stroke-width="1.38"/>
+<g fill="#e6e6e6" stroke="#2b2622" stroke-width="1.38"><circle cx="25.5" cy="44.400000000000006" r="4.6"/><circle cx="18.6" cy="35.2" r="3.4499999999999997"/><circle cx="14" cy="27.150000000000006" r="2.3"/></g>
 <path d="M40.45 66.25 L56.55 69.7 L56.55 60.5 Q48.5 58.2 40.45 62.8 Z" fill="#2b2622"/>
 <path d="M79.55 66.25 L63.45 69.7 L63.45 60.5 Q71.5 58.2 79.55 62.8 Z" fill="#2b2622"/>
 <circle cx="48.5" cy="72" r="2.53" fill="#2b2622"/><circle cx="71.5" cy="72" r="2.53" fill="#2b2622"/>
-<path d="M49.65 86.95 L54.25 83.5 L58.85 86.95 L63.45 83.5 L68.05 86.95" stroke="#2b2622" stroke-width="2.9899999999999998" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
 <g stroke="#d93a3a" stroke-width="2.9899999999999998" stroke-linecap="round" fill="none"><path d="M83 42.1 Q87.6 46.7 92.19999999999999 42.1"/><path d="M83 51.3 Q87.6 46.7 92.19999999999999 51.3"/><path d="M83 42.1 Q78.4 46.7 83 51.3"/><path d="M92.19999999999999 42.1 Q96.8 46.7 92.19999999999999 51.3"/></g>
 <path d="M56 78 L64 78 L60 82 Z" fill="#d9646a"/>
 <path d="M63 86 L63 91 L66 86 Z" fill="#fff" stroke="#2b2622" stroke-width="1.2" stroke-linejoin="round"/>
+</g>
 </svg>
