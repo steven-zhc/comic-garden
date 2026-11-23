@@ -1,0 +1,77 @@
+---
+import Layout from '../components/Layout.astro'
+import kit from '../kit.json'
+import { asset } from '../lib'
+---
+
+<Layout title="The kit · Comic Garden">
+  <h1>The kit</h1>
+  <p>Every strip is put together from these pieces. The names are what a comic script uses.</p>
+
+  <h2>Characters</h2>
+  {
+    Object.entries(kit.characters).map(([id, c]) => (
+      <section>
+        <h3>
+          {c.name} <code>{id}</code>
+        </h3>
+        <p>{c.about}</p>
+        <div class="row">
+          {kit.expressions.map((e) => (
+            <figure>
+              <img src={asset(`characters/${id}/${e}.svg`)} alt={`${c.name}, ${e}`} width="90" />
+              <figcaption>
+                <code>{e}</code>
+              </figcaption>
+            </figure>
+          ))}
+        </div>
+      </section>
+    ))
+  }
+
+  <h2>Props</h2>
+  <div class="row">
+    {
+      Object.entries(kit.props).map(([id, about]) => (
+        <figure>
+          <img src={asset(`props/${id}.svg`)} alt={about} width="64" />
+          <figcaption>
+            <code>{id}</code>
+          </figcaption>
+        </figure>
+      ))
+    }
+  </div>
+
+  <h2>Backgrounds</h2>
+  <div class="row">
+    {
+      Object.entries(kit.backgrounds).map(([id, about]) => (
+        <figure>
+          <img src={asset(`backgrounds/${id}.svg`)} alt={about} width="200" />
+          <figcaption>
+            <code>{id}</code>
+          </figcaption>
+        </figure>
+      ))
+    }
+  </div>
+</Layout>
+
+<style>
+  .row {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 16px;
+  }
+  figure {
+    margin: 0;
+    text-align: center;
+  }
+  img {
+    display: block;
+    background: #fff;
+    border: 1px solid #d8d0c4;
+  }
+</style>

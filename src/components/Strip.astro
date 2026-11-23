@@ -1,0 +1,117 @@
+---
+import { asset, wrap, type Comic } from '../lib'
+
+interface Props {
+  comic: Comic
+}
+const { comic } = Astro.props
+
+const W = 400
+const H = 300
+const FIG = { w: 135, h: 180 }
+const FIG_X = { left: 30, right: 235 } as const
+const FIG_Y = H - FIG.h - 6
+const PROP = 70
+const PROP_X = { left: 12, center: 165, right: 318 } as const
+const PROP_Y = H - PROP - 14
+const LINE = 17
+
+const cjk = (s: string) => /[\u3000-\u9fff\uac00-\ud7af]/.test(s)
+
+function bubble(says: string, position: 'left' | 'right', top: number) {
+  const rows = wrap(says, cjk(says) ? 11 : 21)
+  const x = position === 'left' ? 8 : 212
+  const w = 180
+  const h = rows.length * LINE + 14
+  const tipX = FIG_X[position] + FIG.w / 2
+  const baseX = Math.min(Math.max(tipX, x + 24), x + w - 24)
+  return { rows, x, y: top, w, h, baseX, tail: `${baseX - 9},${top + h - 1} ${baseX + 9},${top + h - 1} ${tipX},${top + h + 16}` }
+}
+---
+
+<div class="strip" role="img" aria-label={`${comic.title}: ${comic.joke}`}>
+  {
+    comic.panels.map((panel) => {
+      const top = panel.caption ? 40 : 10
+      const speeches = panel.cast.filter((m) => m.says).map((m) => bubble(m.says!, m.position, top))
+      return (
+        <svg class="panel" viewBox={`0 0 ${W} ${H}`} xmlns="http://www.w3.org/2000/svg">
+          <image href={asset(`backgrounds/${panel.background}.svg`)} width={W} height={H} />
+          {(panel.props ?? []).map((p) => (
+            <image href={asset(`props/${p.prop}.svg`)} x={PROP_X[p.position]} y={PROP_Y} width={PROP} height={PROP} />
+          ))}
+          {panel.cast.map((m) => (
+            <image
+              href={asset(`characters/${m.character}/${m.expression}.svg`)}
+              x={FIG_X[m.position]}
+              y={FIG_Y}
+              width={FIG.w}
+              height={FIG.h}
+            />
+          ))}
+          {panel.caption && (
+            <g>
+              <rect x="8" y="6" width={W - 16} height="26" rx="3" class="caption" />
+              <text x="16" y="24" class="caption-text">
+                {panel.caption}
+              </text>
+            </g>
+          )}
+          {speeches.map((b) => (
+            <g>
+              <rect x={b.x} y={b.y} width={b.w} height={b.h} rx="14" class="bubble" />
+              <polygon points={b.tail} class="bubble" />
+              <rect x={b.baseX - 8} y={b.y + b.h - 3} width="16" height="4" class="bubble-fill" />
+              {b.rows.map((row, i) => (
+                <text x={b.x + b.w / 2} y={b.y + 20 + i * LINE} text-anchor="middle" class="says">
+                  {row}
+                </text>
+              ))}
+            </g>
+          ))}
+          <rect x="1" y="1" width={W - 2} height={H - 2} class="frame" />
+        </svg>
+      )
+    })
+  }
+</div>
+
+<style>
+  .strip {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    gap: 10px;
+  }
+  .panel {
+    width: 100%;
+    height: auto;
+    display: block;
+    background: #fff;
+  }
+  .frame {
+    fill: none;
+    stroke: #2b2622;
+    stroke-width: 3;
+  }
+  .bubble {
+    fill: #fff;
+    stroke: #2b2622;
+    stroke-width: 2;
+  }
+  .bubble-fill {
+    fill: #fff;
+  }
+  .says {
+    font: 600 14px 'Comic Neue', 'Comic Sans MS', ui-rounded, system-ui, sans-serif;
+    fill: #2b2622;
+  }
+  .caption {
+    fill: #fff6c8;
+    stroke: #2b2622;
+    stroke-width: 1.5;
+  }
+  .caption-text {
+    font: italic 13px ui-serif, Georgia, serif;
+    fill: #2b2622;
+  }
+</style>

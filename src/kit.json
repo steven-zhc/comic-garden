@@ -1,0 +1,31 @@
+{
+  "limits": {
+    "panels": { "min": 3, "max": 4 },
+    "castPerPanel": { "min": 1, "max": 2 },
+    "bubbleChars": 70,
+    "captionChars": 80,
+    "titleChars": 60
+  },
+  "characters": {
+    "miso": { "name": "Miso", "about": "an orange tabby cat, sarcastic, loves naps and knocking things over" },
+    "rosa": { "name": "Rosa", "about": "the gardener, straw hat and green apron, patient until she is not" },
+    "oak": { "name": "Oak", "about": "an old talking tree, slow, wise, occasionally smug" }
+  },
+  "expressions": ["neutral", "happy", "surprised", "annoyed"],
+  "props": {
+    "watering-can": "a blue watering can",
+    "umbrella": "a red umbrella",
+    "coffee-cup": "a steaming cup of coffee",
+    "laptop": "an open laptop",
+    "flower-pot": "a pot with one yellow flower",
+    "sign": "a blank wooden sign"
+  },
+  "backgrounds": {
+    "garden": "daytime garden with a fence and flowers",
+    "kitchen": "a kitchen with a window and a counter",
+    "office": "an office wall with a chart",
+    "night": "a night sky with a crescent moon over a hill"
+  },
+  "positions": ["left", "right"],
+  "tags": ["garden", "animals", "work", "food", "weather", "puns", "tech"]
+}

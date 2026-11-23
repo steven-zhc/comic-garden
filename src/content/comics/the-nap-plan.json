@@ -1,0 +1,28 @@
+{
+  "title": "The Nap Plan",
+  "joke": "Why did the cat sit on the laptop? It wanted to keep an eye on the mouse.",
+  "submittedBy": "comic-garden",
+  "date": "2026-11-23",
+  "tags": ["animals", "tech", "puns"],
+  "panels": [
+    {
+      "background": "office",
+      "cast": [{ "character": "rosa", "expression": "neutral", "position": "left", "says": "Miso, I need my laptop back." }],
+      "props": [{ "prop": "laptop", "position": "right" }]
+    },
+    {
+      "background": "office",
+      "cast": [
+        { "character": "rosa", "expression": "annoyed", "position": "left", "says": "Why are you sitting on it?" },
+        { "character": "miso", "expression": "neutral", "position": "right" }
+      ]
+    },
+    {
+      "background": "office",
+      "cast": [
+        { "character": "rosa", "expression": "surprised", "position": "left" },
+        { "character": "miso", "expression": "happy", "position": "right", "says": "Someone has to keep an eye on the mouse." }
+      ]
+    }
+  ]
+}

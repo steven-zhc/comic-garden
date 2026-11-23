@@ -1,0 +1,31 @@
+name: New joke
+description: Bring a joke; an agent turns it into a comic strip.
+title: 'Draw: '
+labels: [feature]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Write the joke as you would tell it. An agent picks the characters, the panels and the lines from the kit in `src/kit.json`.
+        After you open this, assign it to yourself so Lingtai takes it.
+  - type: textarea
+    id: joke
+    attributes:
+      label: The joke
+      description: The setup and the punchline, as you would tell it.
+      placeholder: Why did the cat sit on the laptop? It wanted to keep an eye on the mouse.
+    validations:
+      required: true
+  - type: input
+    id: cast
+    attributes:
+      label: Who should be in it (optional)
+      description: Any of miso (the cat), rosa (the gardener), oak (the tree).
+      placeholder: miso, rosa
+  - type: input
+    id: by
+    attributes:
+      label: Credit the joke to
+      description: The name shown under the strip.
+    validations:
+      required: true

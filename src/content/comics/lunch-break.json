@@ -1,0 +1,36 @@
+{
+  "title": "Lunch Break",
+  "joke": "Why don't trees ever take a lunch break? They already make their own food at work.",
+  "submittedBy": "comic-garden",
+  "date": "2026-11-23",
+  "tags": ["garden", "food", "work"],
+  "panels": [
+    {
+      "background": "garden",
+      "caption": "Noon, in the garden.",
+      "cast": [{ "character": "rosa", "expression": "happy", "position": "left", "says": "Lunch break! Coming, Oak?" }],
+      "props": [{ "prop": "coffee-cup", "position": "center" }]
+    },
+    {
+      "background": "garden",
+      "cast": [
+        { "character": "rosa", "expression": "neutral", "position": "left" },
+        { "character": "oak", "expression": "neutral", "position": "right", "says": "No need." }
+      ]
+    },
+    {
+      "background": "garden",
+      "cast": [
+        { "character": "rosa", "expression": "annoyed", "position": "left", "says": "Too busy again?" },
+        { "character": "oak", "expression": "neutral", "position": "right" }
+      ]
+    },
+    {
+      "background": "garden",
+      "cast": [
+        { "character": "rosa", "expression": "surprised", "position": "left" },
+        { "character": "oak", "expression": "happy", "position": "right", "says": "I make my own food at work." }
+      ]
+    }
+  ]
+}

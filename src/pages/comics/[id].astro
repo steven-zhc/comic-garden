@@ -1,0 +1,40 @@
+---
+import Layout from '../../components/Layout.astro'
+import Strip from '../../components/Strip.astro'
+import { characterName, shelved, type Comic } from '../../lib'
+
+export function getStaticPaths() {
+  return shelved().map((comic) => ({ params: { id: comic.id }, props: { comic } }))
+}
+
+interface Props {
+  comic: Comic
+}
+const { comic } = Astro.props
+const cast = [...new Set(comic.panels.flatMap((p) => p.cast.map((m) => characterName(m.character))))]
+---
+
+<Layout title={`${comic.title} · Comic Garden`}>
+  <h1>{comic.title}</h1>
+  <Strip comic={comic} />
+  <section>
+    <h2>The joke</h2>
+    <blockquote>{comic.joke}</blockquote>
+    <p class="meta">
+      by {comic.submittedBy} · {comic.date} · starring {cast.join(', ')} · {comic.tags.join(', ')}
+    </p>
+  </section>
+</Layout>
+
+<style>
+  blockquote {
+    margin: 0;
+    padding: 12px 16px;
+    border-left: 4px solid #5f9e5a;
+    background: #fff;
+  }
+  .meta {
+    color: #7a6f63;
+    font-size: 14px;
+  }
+</style>
