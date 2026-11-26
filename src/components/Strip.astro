@@ -15,6 +15,20 @@ const PROP = 70
 const PROP_X = { left: 12, center: 165, right: 318 } as const
 const PROP_Y = H - PROP - 14
 const LINE = 17
+// A prop a character sits or stands on (`on`), and one in its hands (`holds`).
+const SEAT = { w: 104, h: 72 }
+const LIFT = 52
+const HELD = 62
+
+const seatOf = (position: 'left' | 'right') => ({
+  x: FIG_X[position] + (FIG.w - SEAT.w) / 2,
+  y: H - SEAT.h - 6,
+})
+// The hand nearer the middle of the panel holds it, a little below the head.
+const heldOf = (position: 'left' | 'right', figY: number) => ({
+  x: position === 'left' ? FIG_X.left + FIG.w - HELD / 2 - 6 : FIG_X.right - HELD / 2 + 6,
+  y: figY + FIG.h * 0.5,
+})
 
 const cjk = (s: string) => /[\u3000-\u9fff\uac00-\ud7af]/.test(s)
 
@@ -40,15 +54,24 @@ function bubble(says: string, position: 'left' | 'right', top: number) {
           {(panel.props ?? []).map((p) => (
             <image href={asset(`props/${p.prop}.svg`)} x={PROP_X[p.position]} y={PROP_Y} width={PROP} height={PROP} />
           ))}
-          {panel.cast.map((m) => (
-            <image
-              href={asset(`characters/${m.character}/${m.expression}.svg`)}
-              x={FIG_X[m.position]}
-              y={FIG_Y}
-              width={FIG.w}
-              height={FIG.h}
-            />
-          ))}
+          {panel.cast.map((m) => {
+            const figY = m.on ? FIG_Y - LIFT : FIG_Y
+            const seat = seatOf(m.position)
+            const held = heldOf(m.position, figY)
+            return (
+              <g>
+                {m.on && <image href={asset(`props/${m.on}.svg`)} x={seat.x} y={seat.y} width={SEAT.w} height={SEAT.h} />}
+                <image
+                  href={asset(`characters/${m.character}/${m.expression}.svg`)}
+                  x={FIG_X[m.position]}
+                  y={figY}
+                  width={FIG.w}
+                  height={FIG.h}
+                />
+                {m.holds && <image href={asset(`props/${m.holds}.svg`)} x={held.x} y={held.y} width={HELD} height={HELD} />}
+              </g>
+            )
+          })}
           {panel.caption && (
             <g>
               <rect x="8" y="6" width={W - 16} height="26" rx="3" class="caption" />

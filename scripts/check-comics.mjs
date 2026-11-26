@@ -12,6 +12,12 @@ const { limits } = kit
 const problems = []
 const fail = (where, what) => problems.push(`${where}: ${what}`)
 
+const checkProp = (name, at, what) => {
+  const known = name in kit.props || existsSync(join(root, 'public/kit/props', `${name}.svg`))
+  if (!known) fail(at, `${what} "${name}" has no public/kit/props/${name}.svg`)
+  else if (!(name in kit.props)) fail(at, `${what} "${name}" has an SVG but no entry in src/kit.json`)
+}
+
 const ID = /^[a-z0-9]+(-[a-z0-9]+)*$/
 const DATE = /^\d{4}-\d{2}-\d{2}$/
 
@@ -75,11 +81,15 @@ for (const file of files) {
       else if (taken.has(member.position)) fail(at, `two characters stand at ${member.position}`)
       else taken.add(member.position)
       text(member.says, `${member.character}'s line`, limits.bubbleChars, false, at)
+      for (const field of ['holds', 'on']) {
+        const name = member[field]
+        if (name === undefined) continue
+        if (typeof name !== 'string' || name.trim() === '') fail(at, `${member.character}'s ${field} must name a prop`)
+        else checkProp(name, at, `${member.character}'s ${field}`)
+      }
     }
     for (const prop of panel.props ?? []) {
-      const known = prop.prop in kit.props || existsSync(join(root, 'public/kit/props', `${prop.prop}.svg`))
-      if (!known) fail(at, `prop "${prop.prop}" has no public/kit/props/${prop.prop}.svg`)
-      else if (!(prop.prop in kit.props)) fail(at, `prop "${prop.prop}" has an SVG but no entry in src/kit.json`)
+      checkProp(prop.prop, at, 'prop')
       if (!['left', 'center', 'right'].includes(prop.position)) fail(at, 'a prop position is left, center or right')
     }
     text(panel.caption, 'caption', limits.captionChars, false, at)

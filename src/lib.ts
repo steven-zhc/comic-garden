@@ -6,6 +6,10 @@ export interface CastMember {
   expression: string
   position: 'left' | 'right'
   says?: string
+  /** A prop from the kit drawn in this character's hands. */
+  holds?: string
+  /** A prop from the kit this character sits or stands on; the character is raised onto it. */
+  on?: string
 }
 export interface Prop {
   prop: string
